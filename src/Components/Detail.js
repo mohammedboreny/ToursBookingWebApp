@@ -6,8 +6,6 @@ import {useLocation} from 'react-router-dom';
 
 function Detail() {
   const location = useLocation();
-  console.log(location.state);
-  console.log(location.state[0].name);
   return (
     <>
       <Container className='pt-5 h-auto'>
