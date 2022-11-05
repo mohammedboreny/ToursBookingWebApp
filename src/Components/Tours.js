@@ -43,7 +43,7 @@ const Tours = () => {
   let HandleTransition = (id) => { 
     console.log(`key:${id}`);
     const listCards = items.filter((x) => x.id === id);
-    navigate('/detail', { state:listCards.info });
+    navigate('/detail', { state:listCards });
   };
     
   

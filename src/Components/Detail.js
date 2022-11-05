@@ -1,16 +1,18 @@
 import React from 'react'
 import Tours from './Tours';
-import Jumbotron from 'react-bootstrap/Jumbotron';
+import 'bootstrap/dist/css/bootstrap.min.css';  
 
 import {useLocation} from 'react-router-dom';
 
 function Detail() {
   const location = useLocation();
-
-  return (<>
-    <Jumbotron>
-      <h1>{location.name} </h1>
-</Jumbotron>
+  console.log(location.state);
+  console.log(location.state[0].name);
+  return (
+    <>
+      
+        <div className='pt-5'>{location.state[0].name}</div>
+    
     </>
   )
 }
