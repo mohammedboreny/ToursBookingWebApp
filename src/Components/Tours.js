@@ -2,6 +2,9 @@
 import { render } from "@testing-library/react";
 import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';  
+import {Link, useNavigate} from 'react-router-dom';
+
+
 import Detail from "./Detail";
 import {Container ,Card, Col, Button, Row,Tab} from 'react-bootstrap';  
 const Tours = () => {
@@ -35,11 +38,15 @@ const Tours = () => {
       price: ""
     }
   ]);
+  const navigate = useNavigate();
+
   let HandleTransition = (id) => { 
     console.log(`key:${id}`);
-    const listCards = items.filter((x) => x.id !== id);
+    const listCards = items.filter((x) => x.id === id);
+    navigate('/detail', { state:listCards.info });
+  };
     
-  }
+  
   return (
       <main className="container pt-5 ">
     
