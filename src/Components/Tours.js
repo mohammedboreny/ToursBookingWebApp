@@ -35,8 +35,10 @@ const Tours = () => {
       price: ""
     }
   ]);
-  function Handle () { 
-return console.log('Fired');
+  let HandleTransition = (id) => { 
+    console.log(`key:${id}`);
+    const listCards = items.filter((x) => x.id !== id);
+    
   }
   return (
       <main className="container pt-5 ">
@@ -46,7 +48,7 @@ return console.log('Fired');
       {items.map((x) => (
         <Col >
           
-          <Card onClick={() => console.log("nice")} >  
+          <Card key={x.id} onClick={() => HandleTransition(x.id)} >  
           <Card.Img variant="top" src={x.image} />  
           <Card.Body>  
               <Card.Title >{x.name }</Card.Title>  
