@@ -1,41 +1,12 @@
-import React from 'react';
-import React, { Component } from 'react';
-function Home() {
-    const information = [
-        {
-            id: 1,
-            name: '',
-            info: "",
-            image: "",
-            price: ''
-        },
-        {
-            id: 2,
-            name: '',
-            info: "",
-            image: "",
-            price: ''
-        }, {
-            id: 3,
-            name: '',
-            info: "",
-            image: "",
-            price: ''
-        }, {
-            id: 4,
-            name: '',
-            info: "",
-            image: "",
-            price: ''
-        }];
+import React from 'react'
+import Tours from './Tours'
+const Home = () => {
     return (
-        render(
-            information.map((x) => {
-                <>
-                    <div className='card'>{x.id}</div>
-                </>
-            })
-        )
+      <>
+      <div>
+          <Tours/>
+    </div>
+    </>
   )
 }
 

@@ -2,7 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import react from 'react';
 import React, { Component } from 'react';
-import Home from"./Components/Home"
+import Home from "./Components/Home"
+import Detail from './Components/Detail';
+import Header from './Components/Header';
 import {
 	BrowserRouter as Router,
 	Routes,
@@ -10,17 +12,27 @@ import {
 	Link
 } from 'react-router-dom';
 
-function App() {
-  return (
-    render(
-    <>
+class App extends Component {
+  render() {
+    return (
+      <>
+            <div className="App">
+              <Header/>
+        <Router>
+         
+        <Routes>
+            <Route exact path='/' element={< Home />}></Route>
+            <Route exact path='/details' element={< Detail />}></Route>
+          </Routes>
+        </Router>
       
-      <div className="App">
-        <Home />
-      </div>
-    </>
-  ));
+          {/* <Home /> */}
+        </div>
+      </>
   
+    )
+  }
 }
+
 
 export default App;
