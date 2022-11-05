@@ -2,6 +2,7 @@
 import { render } from "@testing-library/react";
 import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';  
+import Detail from "./Detail";
 import {Container ,Card, Col, Button, Row,Tab} from 'react-bootstrap';  
 const Tours = () => {
   const [items, setItems] = useState([
@@ -34,21 +35,23 @@ const Tours = () => {
       price: ""
     }
   ]);
+  function Handle () { 
+return console.log('Fired');
+  }
   return (
       <main className="container pt-5 ">
     
       <Container className='p-4 container-fluid'>
       <Row>
       {items.map((x) => (
-        <Col>
+        <Col >
           
-          <Card >  
+          <Card onClick={() => console.log("nice")} >  
           <Card.Img variant="top" src={x.image} />  
           <Card.Body>  
-              <Card.Title>{x.name }</Card.Title>  
+              <Card.Title >{x.name }</Card.Title>  
             <Card.Text>  
 The Price is {x.price}            </Card.Text>  
-            <Button variant="primary">Read More</Button>  
           </Card.Body>  
             </Card>  
             </Col>
