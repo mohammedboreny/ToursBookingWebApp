@@ -1,6 +1,6 @@
 import React from 'react'
 import Tours from './Tours';
-import 'bootstrap/dist/css/bootstrap.min.css';  
+import {Container ,Card, Col, Button, Row,Tab} from 'react-bootstrap';  
 
 import {useLocation} from 'react-router-dom';
 
@@ -10,9 +10,21 @@ function Detail() {
   console.log(location.state[0].name);
   return (
     <>
-      
-        <div className='pt-5'>{location.state[0].name}</div>
-    
+      <Container className='pt-5'>
+      <Row>
+        <img src={location.state[0].image}/>
+        </Row>
+        <Row>
+        <div className='pt-5 text-center h1'>{location.state[0].name}</div>
+        </Row>
+       
+        <Row>
+        <div className='pt-5 text-uppercase'>{location.state[0].info}</div>
+        </Row>
+        <Row>
+        <div className='pt-5 text-center h3'> Ticket Price ={location.state[0].price}</div>
+      </Row>
+        </Container>
     </>
   )
 }

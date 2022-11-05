@@ -12,9 +12,9 @@ const Tours = () => {
     {
       id: 1,
       name: "Petra",
-      info: "",
-      image: "",
-      price: ""
+      info: "The city of Petra, capital of the Nabataean Arabs, is one of the most famous archaeological sites in the world, it is Located 240 km south of the capital Amman and 120 km north of the red sea town of Aqaba (see the Map), Petra the world wonder, is undoubtedly Jordan's most valuable treasure and greatest tourist attraction, and it is visited by tourists from all over the world. ",
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Petra_Jordan_BW_36.JPG/1200px-Petra_Jordan_BW_36.JPG?20190610155846",
+      price: "22"
     },
     {
       id: 2,
