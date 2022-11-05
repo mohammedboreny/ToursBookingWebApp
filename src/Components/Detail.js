@@ -10,7 +10,7 @@ function Detail() {
   console.log(location.state[0].name);
   return (
     <>
-      <Container className='pt-5'>
+      <Container className='pt-5 h-auto'>
       <Row>
         <img src={location.state[0].image}/>
         </Row>
