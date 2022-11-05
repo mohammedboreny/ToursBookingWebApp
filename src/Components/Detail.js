@@ -2,7 +2,7 @@ import React from 'react'
 
 function Detail() {
   return (
-    <div>Detail</div>
+    <div className='pt-5'>This is Details </div>
   )
 }
 

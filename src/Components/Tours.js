@@ -1,5 +1,8 @@
+
+import { render } from "@testing-library/react";
 import { useState } from "react";
-import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';  
+import {Container ,Card, Col, Button, Row,Tab} from 'react-bootstrap';  
 const Tours = () => {
   const [items, setItems] = useState([
     {
@@ -7,48 +10,58 @@ const Tours = () => {
       name: "Petra",
       info: "",
       image: "",
-      price: ''
+      price: ""
     },
     {
       id: 2,
       name: "Another",
       info: "",
       image: "",
-      price: ''
-    }, {
+      price: ""
+    },
+    {
       id: 3,
-      name: "Another",
+      name: "Another1",
       info: "",
       image: "",
-      price: ''
-    }, {
+      price: ""
+    },
+    {
       id: 4,
-      name: '',
+      name: "Another 2",
       info: "",
       image: "",
-      price: ''
-    }]);
+      price: ""
+    }
+  ]);
   return (
-
-   
-   
-    <>
-       { items.map((x) => (
-        <div className="card" style="width: 18rem;">
-          <img src={x.image} className="card-img-top" alt={x.info} />
-          <div className="card-body">
-            <div> {x.id} </div>
-            <h5 className="card-title">{x.name}</h5>
-            <p className="card-text"> Ticket Price = {x.price}</p>
-            <a href="#" className="btn btn-primary">More Info</a>
-          </div>
-        </div>
-
-))}
-        </>
+      <main className="container pt-5 ">
+    
+      <Container className='p-4 container-fluid'>
+      <Row>
+      {items.map((x) => (
+        <Col>
+          
+          <Card >  
+          <Card.Img variant="top" src={x.image} />  
+          <Card.Body>  
+              <Card.Title>{x.name }</Card.Title>  
+            <Card.Text>  
+The Price is {x.price}            </Card.Text>  
+            <Button variant="primary">Read More</Button>  
+          </Card.Body>  
+            </Card>  
+            </Col>
       
-   
+          
+      ))}
+        </Row>
+          </Container>  
+        </main>
+    
+
   )
+
 }
 
-export default Tours
+export default Tours;

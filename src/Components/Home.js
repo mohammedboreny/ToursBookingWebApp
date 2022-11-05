@@ -1,9 +1,9 @@
-import React from 'react'
-import Tours from './Tours'
+import React from 'react';
+import Tours from './Tours';
 const Home = () => {
     return (
       <>
-      <div>
+      <div className='container-fluid pt-5 justify-content-center'>
           <Tours/>
     </div>
     </>
